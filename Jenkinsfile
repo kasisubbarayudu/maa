@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage ('Lint') {
-            when { anyOf { branch 'dev*'; branch 'master'; branch 'PR*'; branch 'feature*' } }
+            when { anyOf { branch 'dev*'; branch 'main'; branch 'PR*'; branch 'feature*' } }
             steps {
                 script {
                     echo "This is test stage"
@@ -13,7 +13,7 @@ pipeline {
             }
         } 
         stage ('Unit') {
-            when { anyOf { branch 'dev*'; branch 'master'; branch 'PR*' } }
+            when { anyOf { branch 'dev*'; branch 'main'; branch 'PR*' } }
             steps {
                 script {
                     echo "This is Unit stage"
@@ -21,7 +21,7 @@ pipeline {
             }
         }
         stage ('Build') {
-            when { branch 'master' }
+            when { branch 'main' }
             steps {
                 script {
                     echo "This is build stage"
@@ -30,4 +30,4 @@ pipeline {
         } 
          
     }
-}
+} 
