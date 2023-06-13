@@ -9,6 +9,7 @@ pipeline {
             steps {
                 script {
                     echo "This is test stage"
+                    sh 'echo $env.BRANCH_NAME'
                 }
             }
         } 
