@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: hind
-          image: nginx:stable
+          image: nginx:latest
