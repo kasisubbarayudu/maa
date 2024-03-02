@@ -6,13 +6,13 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: kashi-nginx
-      argo: true
+      app: "kashi-nginx"
+      argo: "true"
   template:
     metadata:
       labels:
-        app: kashi-nginx
-        argo: true
+        app: "kashi-nginx"
+        argo: "true"
     spec:
       containers:
         - name: hind
