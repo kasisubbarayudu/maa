@@ -54,4 +54,5 @@ jobs:
         with: 
           name: test artifacts
           path: kashi
-
+      - name: Check artifact status
+        run: ls ./
