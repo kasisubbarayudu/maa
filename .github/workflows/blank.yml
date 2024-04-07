@@ -55,4 +55,4 @@ jobs:
           name: test artifacts
           path: kashi
       - name: Check artifact status
-        run: pwd && ls -l ./
+        run: pwd && ls -l ./ && cd ../ && ls -l && echo $HOME && cd ../ && ls -l ./
