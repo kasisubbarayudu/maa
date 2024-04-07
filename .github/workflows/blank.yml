@@ -47,6 +47,7 @@ jobs:
           path: k8s-manifests
   deploy: 
     runs-on: ubuntu-20.04
+    needs: build
     steps:
       - name: Unarchive
         uses: actions/download-artifact@v4
